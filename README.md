@@ -13,3 +13,4 @@ Une application de blog moderne construite avec la stack **MERN** et stylisée a
 
 ## 🎯 Fonctionnalités
 - 📱 Responsive design avec Tailwind CSS
+- ✉️ Envoi d'emails(contact) : Utilisation d'EmailJS pour envoyer des emails sans backend.
