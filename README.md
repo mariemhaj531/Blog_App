@@ -8,7 +8,6 @@ Une application de blog moderne construite avec la stack **MERN** et stylisée a
 - ⚙️ **Backend** : Node.js + Express.js
 - 🗃️ **Base de données** : MongoDB (via Mongoose)
 - 🔐 Authentification : JWT (JSON Web Token)
-- ☁️ Déploiement (optionnel) : Vercel (Frontend) & Render/Heroku (Backend)
 
 ---
 
