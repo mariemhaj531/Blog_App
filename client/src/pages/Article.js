@@ -1,16 +1,21 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import articleContent from "./Article-content";
+
+import NotFound from './NotFound';
+
+import Articles from '../components/Articles';
 const Article = () => {
   //useParams:Accéder aux paramètres dynamique dans URL
   const { name } = useParams();
   const article = articleContent.find((article) => article.name === name);
 
   if (!article) {
-    return <h1> Article does not exists</h1>;
+    return <NotFound />;
   };
+  const otherArticles = articleContent.filter((article) => article.name !== name);
   return (
-    <div>
+    <>
      <h1 className='sm:text-4xl text-2xl font-bold my-6 text-gray-900'>
      {article.title}
     </h1>
@@ -19,7 +24,11 @@ const Article = () => {
           {paragraph}
         </p>
       ))}
-      </div>
+      <h1 className='sm:text-4xl text-2xl font-bold my-6 text-gray-900'>Other Articles</h1>
+     <div className='flex flex-wrap -m-4'>
+      <Articles articles={otherArticles} />
+     </div>
+      </>
   )
 }
 

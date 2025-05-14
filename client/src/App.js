@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Article from "./pages/Article";
 import ArticlesList from "./pages/ArticlesList";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 //components
 import Navbar from "./components/Navbar";
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/articles-list" element={<ArticlesList />} />
       <Route path="/article/:name" element={<Article />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
      </Routes>
     </div>
     </Router>
